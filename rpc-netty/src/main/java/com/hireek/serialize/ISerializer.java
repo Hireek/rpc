@@ -6,10 +6,11 @@ package com.hireek.serialize;
  * @author Hireek
  * @date 2021-11-16 18:59
  */
-public interface ISerialize {
+public interface ISerializer {
 
-    Object deSerialize (byte[] bytes);
+    <T> T deserialize(byte[] bytes, Class<T> clazz);
 
     byte[] serialize(Object object);
 
+    byte getType();
 }

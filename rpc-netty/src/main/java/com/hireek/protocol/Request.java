@@ -2,6 +2,8 @@ package com.hireek.protocol;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * 描述
  *
@@ -9,9 +11,14 @@ import lombok.Data;
  * @date 2021-11-16 18:54
  */
 @Data
-public class Request<T> {
+public class Request implements Serializable {
 
-    private Header header;
+    private String className;
 
-    private T body;
+    private String methodName;
+
+    private Object[] params;
+
+    private Class[] paramTypes;
+
 }

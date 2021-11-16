@@ -11,10 +11,9 @@ import java.io.Serializable;
  * @date 2021-11-16 18:54
  */
 @Data
-public class Response implements Serializable {
+public class Protocol<T> implements Serializable {
 
-    private String msg;
+    private Header header;
 
-    private Object data;
-
+    private T content;
 }
