@@ -1,0 +1,13 @@
+### Maven ###
+*/target
+/target/*
+
+### IntelliJ IDEA ###
+.idea
+*.iml
+
+### Project Application ###
+*.log
+
+### Mac OS X ###
+*.DS_Store
