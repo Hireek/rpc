@@ -13,4 +13,5 @@ public class JDKProxy {
     public <T> T getProxy(final Class<T> interfs, final String serverAddress, final int port) {
         return (T) Proxy.newProxyInstance(interfs.getClassLoader(), new Class[]{interfs}, new ClientProxy(serverAddress, port));
     }
+
 }
